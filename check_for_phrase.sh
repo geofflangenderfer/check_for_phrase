@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 
 url="https://www.moncashwebservice.com/sms/SimServerCurlContentForGrep.asp"
-#phrase="no boxes connected to this bearerbox!"
-phrase="box connections"
+phrase="no boxes connected to this bearerbox!"
 
 while true; do
   html=$(curl -sS $url)
@@ -14,5 +13,5 @@ while true; do
     /usr/sbin/shutdown -r now
   fi	
 
-  sleep 5
+  sleep 300 # 5 minutes
 done
